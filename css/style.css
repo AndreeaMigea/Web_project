@@ -1,0 +1,59 @@
+.header_style{
+    width:80%;
+    height:200px;
+    margin:auto;
+    background-color: rgb(76, 69, 88);
+    color: rgb(255, 255, 255);
+    position:relative;
+    /*min-height: 180px; /* Ensure header is visible even with absolutely positioned children */
+}
+.header_style h1{
+    position:absolute;
+    text-align: right;
+    top:10px;
+    right:0px;
+    font-size: 50px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+}
+.header_style h2{
+    position:absolute;
+    text-align: right;
+    top:100px;
+    right:6px;
+    font-size: 40px;
+    margin-top: 0px;
+}
+.header_style h3{
+    position:absolute;
+    text-align: right;
+    top:125px;
+    right:20px;
+    font-size: 25px;
+    font-style: italic;
+}
+
+
+
+.job_banner{
+    background-color: rgb(176, 144, 206);
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    top: 0;
+    left: 50px;
+    border-top-left-radius: 150px;
+    border-top-right-radius: 150px;
+}
+
+.profile_pic{
+    width: 100%;
+    /* Make the picture round */
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    border-radius: 50%;
+    display: block;
+    margin: 10px auto 5px auto;
+
+}

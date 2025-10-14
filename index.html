@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Personal CV</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>MIGEA </h1>
-        <h2>ANDREEA-MARIA</h2>
-        <img src="images/eu.jpg" alt="Andreea's Photo"> <!-- MOVE THIS TO THE VERTICAL PURPLE BOX NOT IN THE HEADER TO LOOK OK-->
+        <div class="header_style">
+            <h1>MIGEA </h1>
+            <h2>ANDREEA-MARIA</h2>
+            <h3>Software Engineer</h3>
+        </div>
+        
+        <div class="job_banner">
+            <div class="picture_css">
+                <img class="profile_pic" src="images/eu.jpg" alt="Andreea's Photo"> <!-- MOVE THIS TO THE VERTICAL PURPLE BOX NOT IN THE HEADER TO LOOK OK-->
+            </div>
+        </div>
         <nav>
             <a href="#about">About Me</a>
             <a href="#skills">Skills</a>
@@ -31,18 +39,7 @@
            I’m a friendly and approachable person who enjoys collaborating with others and motivated to tackle new challenges while contributing effectively within diverse teams. I’m passionate about learning and growing while making a positive impact.
         </p>
     </section>
-
-    <section id="skills"> <!--add skils in the verical purple box -->
-        <h2>Skills</h2>
-        <ul>
-            <li>HTML, CSS, JavaScript</li>
-            <li>React, Node.js</li>
-            <li>Python, Django</li>
-            <li>Git, GitHub</li>
-        </ul>
-    </section>
-
-    <section id="experience"> <!--make a box for this -->
+        <section id="experience"> <!--make a box for this -->
         <h2>Experience</h2>
         <h3>Web Developer at XYZ Company</h3>
         <p>June 2020 - Present</p>
@@ -60,6 +57,18 @@
         </ul>
     </section>
 
+
+    <section id="skills"> <!--add skils in the verical purple box -->
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Node.js</li>
+            <li>Python, Django</li>
+            <li>Git, GitHub</li>
+        </ul>
+    </section>
+
+
     <section id="education">
         <h2>Education</h2>
         <h3>Bachelor of Science in Computer Science</h3>
@@ -68,7 +77,7 @@
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email:
-    
+        <p>Email: andreea.migea@example.com</p>
+    </section>
 </body>
 </html>
