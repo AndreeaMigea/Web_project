@@ -1,8 +1,8 @@
 .header_style{
-    width:80%;
+    width:100%;
     height:200px;
     margin:auto;
-    background-color: rgb(76, 69, 88);
+    background-color: rgb(93, 97, 110);
     color: rgb(255, 255, 255);
     position:relative;
     /*min-height: 180px; /* Ensure header is visible even with absolutely positioned children */
@@ -33,21 +33,25 @@
     font-style: italic;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+    /* padding-bottom: 500px; Spatiu adaugat sa pot da scroll */
+}
 
-
-.job_banner{
-    background-color: rgb(176, 144, 206);
+.job_banner{ /*vertical purple box*/
+    background-color: rgb(225, 214, 235);
     height: 100%;
-    width: 300px;
+    width: 25%;
     position: absolute;
     top: 0;
     left: 50px;
-    border-top-left-radius: 150px;
-    border-top-right-radius: 150px;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
 }
 
 .profile_pic{
-    width: 100%;
+    width: 90%;
     /* Make the picture round */
     aspect-ratio: 1 / 1;
     object-fit: cover;
@@ -56,4 +60,22 @@
     display: block;
     margin: 10px auto 5px auto;
 
+}
+/* left box */
+h2{
+    font-size: 30px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.education, .skills, .contact{
+    margin: 10px;
+    padding: 5px;
+    font-size: 14px;
+    /* border: 5px solid rgb(110, 105, 93); */
+
+}
+
+.right-box{
+    float:right;
+    width:65%;
 }
