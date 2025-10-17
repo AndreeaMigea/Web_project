@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <title>Personal CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
     <header>
       <div class="header_style">
         <h1>MIGEA</h1>
-        <h2>ANDREEA-MARIA</h2> <!--change the type so the line will not be displayed here-->
+        <p class="name-style">ANDREEA-MARIA</p>
         <h3>Software Engineer</h3>
       </div>
 
@@ -31,6 +32,29 @@
       <div class="picture_css">
         <img class="profile_pic" src="images/eu.jpg" alt="Andreea's Photo" />
       </div>
+      <section class="contact">
+        <h2>CONTACT</h2> <!-- add icons -->
+        <ul>
+            <li>
+                <li class="contact-row">
+                    <span class="icon-email"><i class="fa fa-envelope"></i></span>
+                    <span class="contact-text">andreea_migea22@yahoo.com</span>
+                </li>
+                <li class="contact-row">
+                    <span class="icon-phone"><i class="fa fa-phone"></i></span>
+                    <span class="contact-text">(+40) 760522039</span>
+                </li>
+                <li class="contact-row">
+                    <span class="icon-linkedin"><i class="fa fa-linkedin"></i></span>
+                    <span class="contact-text">
+                        <a href="https://www.linkedin.com/in/andreea-migea" target="_blank" rel="noopener noreferrer">
+                            linkedin.com/in/andreea-migea
+                        </a>
+                    </span>
+                </li>
+            </li>
+        </ul>
+      </section>
       <section class="education">
         <h2>EDUCATION</h2> <!--change the lines -->
         <p>2019-2023</p>
@@ -48,7 +72,7 @@
       <section class="skills">
         <!--add skils in the verical purple box -->
         <h2>SKILLS</h2>
-        <div>
+        <div class="skills-list">
             <h3>Source Control</h3>
             <ul>
                 <li>Github
@@ -207,19 +231,19 @@
         <div class="skills-list">
             <h3> Others</h3>
             <ul>
-                <li>Agile methodologies (SAFe, Scrum)
+                <li>Agile methodologies<br>(SAFe, Scrum)
                     <div class="progress-bar">
-                        <progress value="70" max="100"></progress>
+                        <progress value="80" max="100"></progress>
                     </div>
                 </li>
                 <li>QA-C Helix 
                     <div class="progress-bar">
-                        <progress value="60" max="100"></progress>
+                        <progress value="75" max="100"></progress>
                     </div>
                 </li>
-                <li>Atlassian JIRA / Confluence
+                <li>Atlassian JIRA/Confluence
                     <div class="progress-bar">
-                        <progress value="70" max="100"></progress>
+                        <progress value="75" max="100"></progress>
                     </div>
                 </li>
                 <li>IBM Jazz
@@ -239,12 +263,6 @@
                 </li>
             </ul>
         </div>
-      </section>
-      <section class="contact">
-        <h2>CONTACT</h2> <!-- add icons -->
-        <p>Email: andreea_migea22@yahoo.com</p>
-        <p>Phone: (+40) 760522039</p>
-        <p>LinkedIn: linkedin.com/in/andreea-migea</p>
       </section>
     </div>
 
@@ -304,22 +322,22 @@
             <div>
                 <ul class="skills-list">
                     <li>Listening - Advanced
-                        <div class="progress-bar">
+                        <div class="progress-bar-languages">
                             <progress value="90" max="100"></progress>
                         </div>
                     </li>
                     <li>Writing - Advanced
-                        <div class="progress-bar">
+                        <div class="progress-bar-languages">
                             <progress value="85" max="100"></progress>
                         </div>
                     </li>
                     <li>Reading - Advanced
-                        <div class="progress-bar">
+                        <div class="progress-bar-languages">
                             <progress value="80" max="100"></progress>
                         </div>
                     </li>
                     <li>Speaking - Advanced
-                        <div class="progress-bar">
+                        <div class="progress-bar-languages">
                             <progress value="85" max="100"></progress>
                         </div>
                     </li>
@@ -331,6 +349,14 @@
       <section>
         <h2>PROJECTS</h2>
         <ul>
+          <li>
+            <h3>PERSONAL CV WEBSITE</h3> <!-- add icons -->
+            <p>
+              A personal CV website built using HTML and CSS to showcase my skills, education, experience, and projects.
+              The website is designed to be visually appealing and easy to navigate, providing a comprehensive overview of my professional background.
+              Technologies used: HTML, CSS
+            </p>
+          </li>
           <li>
             <h3>GUEST HOUSE MANAGEMENT APP</h3> <!-- add icons -->
             <p>

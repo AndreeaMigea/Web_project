@@ -16,7 +16,7 @@
     margin-right: 20px;
     margin-bottom: 0px;
 }
-.header_style h2{
+.header_style .name-style{
     position:absolute;
     text-align: right;
     top:100px;
@@ -28,7 +28,7 @@
 h2::after {
   content: "";
   display: inline-block;
-  width: 35%;              /* length of the line */
+  width: 20%;              /* length of the line */
   height: 3px;
   background-color: #000000;
   border-radius: 2px;
@@ -72,11 +72,21 @@ body {
     margin: 10px auto 5px auto;
 
 }
+
+.contact ul{
+    list-style-type: none;
+    padding: 0;
+}
+.contact-row{
+    padding:2%
+}
+
 /* left box */
 h2{
     font-size: 30px;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
+
 
 .education, .skills, .contact{
     padding: 2%;
@@ -127,8 +137,40 @@ h2{
     border-radius: 10px;
     background-color: #8f1919;
 } */
+/* make each li a horizontal row: label on left, progress bar on right */
+.skills-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+/* progress bar container (flexible width) 
+.progress-bar{
+    flex: 1 1 50%;
+    max-width: 70%;
+    height: 12px;
+    background: #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+}*/
+
+/* filled portion — set per-item width with inline style or CSS variable, e.g. style="--p:75%" */
+.progress-bar .progress{
+    height: 100%;
+    background: linear-gradient(90deg,#8f1919,#c04040);
+    width: var(--p, 50%); /* default 50% */
+    border-radius: 6px;
+}
 
 
+
+
+.progress-bar-languages{
+    float:right;
+    width:70%;
+}
 
 
 
