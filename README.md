@@ -1,0 +1,1 @@
+A personal CV website built using HTML and CSS to showcase my skills, education, experience, and projects. The website is designed to be visually appealing and easy to navigate, providing a comprehensive overview of my professional background. Technologies used: HTML, CSS
