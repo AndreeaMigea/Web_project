@@ -23,6 +23,16 @@
     right:6px;
     font-size: 40px;
     margin-top: 0px;
+    display: flex;
+}
+h2::after {
+  content: "";
+  display: inline-block;
+  width: 35%;              /* length of the line */
+  height: 3px;
+  background-color: #000000;
+  border-radius: 2px;
+  margin-left:25px;
 }
 .header_style h3{
     position:absolute;
@@ -34,6 +44,7 @@
 }
 
 body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     margin: 0;
     padding: 0;
     /* padding-bottom: 500px; Spatiu adaugat sa pot da scroll */
@@ -41,7 +52,7 @@ body {
 
 .job_banner{ /*vertical purple box*/
     background-color: rgb(225, 214, 235);
-    height: 200%;
+    height: 300%;
     width: 32%; /*Adjust after i add progress bars/or  in the same time with progress bar*/
     position: absolute;
     top: 0;
@@ -76,16 +87,77 @@ h2{
 
 }
 
-.progress-bar{
-    width: 50%;
+/* .progress-bar{
+    float:right;
+    width:50%;
+    height:30%;
+    flex:1;
+    /*flex: 1;
+    width: 100%;
     height: 10px;
-    /* background-color: rgb(200, 200, 200); */
+     background-color: rgb(200, 200, 200); 
     border-radius: 5px;
     overflow: hidden;
     display: inline-block;
     vertical-align: middle;
     margin-left: 10px;
 }
+
+.skills-list{
+    float:left;
+    width:50%;
+} */
+/* .progress-bars-skills{
+    width: 50%;
+    height: 100px;
+    float: right;
+    vertical-align: middle;
+    margin-left: 10px;
+    margin-top: 0; /* Move progress bars up 
+    position: relative; /* Allows top adjustment 
+    top: -250px; /* Adjust this value to move the bars higher 
+    
+} */
+
+/* 
+.progress{
+    width: 300px;
+    height: 15px;
+    border: none;
+    border-radius: 10px;
+    background-color: #8f1919;
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .right-box{
     float:right;
     width:60%;/*Adjust after i add progress bars/or  in the same time with progress bar AFTER I ADJUST THE LEFT BOX*/
