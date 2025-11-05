@@ -100,7 +100,8 @@ products.forEach((product) =>
               Added
             </div>
 
-            <button class="add-to-cart-button button-primary">
+            <button class="add-to-cart-button button-primary js-add-to-cart"
+            data-product-name="${product.id}">
               Add to Cart
             </button>
           </div>`;
@@ -111,3 +112,56 @@ console.log(productsHTML);
 //in js file we use the dom by queryselector to find the div with the class js-products
 document.querySelector('.js-products-grid').innerHTML = productsHTML; //this means that will look for the js-products-grid and will take the element and put in javascript
 // .innerHTML means that we want to change the html inside that element
+
+
+
+
+
+//for line 103 wiht button- we add an eventListener to this button to make it work
+//first add class js-add-to-cart to the button 
+//then use dom to add an eventlistener to this button
+
+//document.querySelectorAll('.js-add-to-cart') will give us a list of all the addotcart button 
+//then we loop through each of the buttons using forEach
+
+// wiht data attribute with data-product-name="${product.name}"> we know the name of the clicked product
+
+//how to add the product to the cart -> cart array in new file 
+//instead of usign name of the product use id ->change productName to productId
+
+
+document.querySelectorAll('.js-add-to-cart').forEach((button) => 
+{
+  button.addEventListener('click', () => {
+    //add to the cart
+    //const productName = button.dataset.productName; //dataset is an object that contains all the data attributes of the button
+    const productId = button.dataset.productId
+
+    let matchingItem;
+    cart.forEach((item) => //we figure it out if a product is i the cart
+    {
+      if(productId === item.productId)
+      {
+        matchingItem = item;
+      }
+    });
+
+    if(matchingItem) //it is a truthy var, because if we enter in if above, it is populated,if not is empty
+    {
+      matchingItem.quantity +=1;
+    }
+    else //product is not in the cart
+    { //add to the cart
+      cart.push({
+      productId: productId,
+      quantity: 1
+    });
+    };
+
+    console.log(cart);
+  });
+})
+
+
+
+
