@@ -48,8 +48,9 @@
 //   }
 // ]; 
 
-import {cart} from '../data/cart.js';
+import {cart, addToCart} from '../data/cart.js';
 import {products} from '../data/products.js';
+
 
 let productsHTML = '';
 
@@ -133,51 +134,41 @@ document.querySelector('.js-products-grid').innerHTML = productsHTML; //this mea
 //instead of usign name of the product use id ->change productName to productId
 
 
+
+
+
+function updateCartQuantity() 
+{
+  let cartQuantity = 0;
+
+
+  cart.forEach((cartItem) => //loop trough each obj of the cart
+  {
+    cartQuantity += cartItem.quantity;
+    console.log(cartItem.quantity);
+
+  }
+  );
+
+
+  document.querySelector('.js-cart-quantity')
+    .innerHTML = cartQuantity;
+
+
+}
+
+
+
+//this is the code that runs when we push the add to cart button
 document.querySelectorAll('.js-add-to-cart').forEach((button) => 
 {
   button.addEventListener('click', () => {
     //add to the cart
     //const productName = button.dataset.productName; //dataset is an object that contains all the data attributes of the button
-    const productId = button.dataset.productId
+    const productId = button.dataset.productId;
 
-    let matchingItem;
-    cart.forEach((item) => //we figure it out if a product is i the cart
-    {
-      if(productId === item.productId)
-      {
-        matchingItem = item;
-      }
-    });
-
-    if(matchingItem) //it is a truthy var, because if we enter in if above, it is populated,if not is empty
-    {
-      matchingItem.quantity +=1;
-    }
-    else //product is not in the cart
-    { //add to the cart
-      cart.push({
-      productId: productId,
-      quantity: 1
-    });
-    }
-
-    let cartQuantity = 0;
-
-
-    cart.forEach((item) => //loop trough each obj of the cart
-    {
-      cartQuantity += item.quantity;
-      console.log(item.quantity);
-
-    }
-    );
-
-
-    document.querySelector('.js-cart-quantity')
-      .innerHTML = cartQuantity;
-
-    console.log(cartQuantity);
-    console.log(cart);
+    addToCart(productId);
+    updateCartQuantity();
   });
 });
 
